@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task Tracker</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+
+    <div class="card">
+      
+      <!-- 1. واجهة الترحيب -->
+      <div id="welcomeView" class="view">
+        <div class="welcome-icon">🌱</div>
+        <h2>Welcome!</h2>
+        <p class="welcome-desc">
+          Take a deep breath and start organizing your day, step by step!
+        </p>
+        <button class="start-btn" id="startBtn">Get Started 🚀</button>
+      </div>
+
+      <!-- 2. واجهة المهام -->
+      <div id="taskView" class="view hidden">
+        <header>
+          <h3>🌿"My Tasks"🌿</h3>
+          <p class="subtitle">"Small steps, big results"</p>
+        </header>
+
+        <div class="input-section">
+          <input id="mainTitle" placeholder="Task title..." autocomplete="off" />
+          
+          <div class="subtask-creator">
+            <div class="subtask-input-row">
+              <input id="subtaskInput" placeholder="Add a subtask..." autocomplete="off" />
+              <button type="button" id="addSubtaskBtn" class="secondary-btn">+ Step</button>
+            </div>
+            <ul id="draftSubtasksList" class="draft-list"></ul>
+          </div>
+
+          <button class="add-btn" id="createTaskBtn">🌿 Add Task 🌿</button>
+        </div>
+
+        <!-- أزرار الفلترة -->
+        <div class="filter-tabs">
+          <button class="tab-btn active" data-filter="all">All</button>
+          <button class="tab-btn" data-filter="active">Active</button>
+          <button class="tab-btn" data-filter="completed">Completed</button>
+        </div>
+
+        <!-- قائمة المهام -->
+        <ul id="taskList" class="task-list"></ul>
+
+        <!-- حالة القائمة الفارغة -->
+        <div id="emptyState" class="empty-state hidden">
+          <div class="empty-icon">☕🍃</div>
+          <p class="empty-text">No tasks here! Time to relax or create a new one.</p>
+        </div>
+      </div>
+
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
